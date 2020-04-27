@@ -14,6 +14,7 @@ struct student {
 int main() {
     const int n = 25;
     int i, nameLength;
+
     /** Declaimer: all matches are random **/
     student a[n] = {
             {1,  "Elon Musk",          true,  true,  true},
@@ -44,22 +45,22 @@ int main() {
     };
 
     cout << "ID#\t"
-         << setw(22) << std::left << "Students name"
+         << setw(22) << left << "Students name"
          << setw(8) << "Math"
-         << setw(6) << "Physic"
-         << setw(6) << "English"
+         << setw(8) << "Physic"
+         << setw(8) << "English"
          << endl;
 
     for (i = 0; i < n; i++) {
         cout << a[i].number << "\t"
              << setw(22) << a[i].name
              << setw(8) << a[i].math
-             << setw(6) << a[i].physic
-             << setw(6) << a[i].english
+             << setw(8) << a[i].physic
+             << setw(8) << a[i].english
              << endl;
     }
 
-    cout << "---------------------------------------------" << endl;
+    cout << "----------------------------------------------" << endl;
     cout << "Students that failed more then 1 exam" << endl;
     cout << "---------------------------------------------" << endl;
 
@@ -68,8 +69,8 @@ int main() {
             cout << a[i].number << "\t"
                  << setw(22) << a[i].name
                  << setw(8) << a[i].math
-                 << setw(6) << a[i].physic
-                 << setw(6) << a[i].english
+                 << setw(8) << a[i].physic
+                 << setw(8) << a[i].english
                  << endl;
         }
     }

@@ -11,7 +11,9 @@ int main() {
     }
 
     averageValue = sum / 10;
-    std::cout << "Sum of array: " << sum << std::endl << "Average value is " << averageValue << std::endl;
+    std::cout
+            << "Sum of array: " << sum << std::endl
+            << "Average value is " << averageValue << std::endl;
 
     return 0;
 }

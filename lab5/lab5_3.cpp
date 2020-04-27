@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-    double highest = 0, lowest = 0, arr[10];
+    int arrSize = 10;
+    double highest = 0, lowest = 0, arr[arrSize];
 
     for (int i = 0; i < 10; ++i) {
         std::cout << "Enter " << i + 1 << " num of arr" << std::endl;
@@ -21,8 +22,9 @@ int main() {
         }
     }
 
-    std::cout << "Your lowest value: " << lowest << std::endl;
-    std::cout << "Your highest value: " << highest << std::endl;
+    std::cout
+            << "Your lowest value: " << lowest << std::endl
+            << "Your highest value: " << highest << std::endl;
 
     return 0;
 }

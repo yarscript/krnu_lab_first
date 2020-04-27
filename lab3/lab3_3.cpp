@@ -7,6 +7,7 @@ int main() {
     srand(time(nullptr));
     int a = rand() % 100;
     std::cout << "Guess the number" << std::endl;
+
     while(b != a)
     {
         std::cin >> b;

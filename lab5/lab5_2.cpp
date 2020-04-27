@@ -1,10 +1,11 @@
 #include <iostream>
 
 int main() {
-    double arr[10];
+    int arrSize = 10;
+    double arr[arrSize];
 
-    for (int i = 9; i >= 0; --i) {
-        std::cout << "Enter " << 10 - i << " array num" << std::endl;
+    for (int i = arrSize - 1; i >= 0; --i) {
+        std::cout << "Enter " << arrSize - i << " array num" << std::endl;
         std::cin >> arr[i];
     }
 
