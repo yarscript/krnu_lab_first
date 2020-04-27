@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ struct student {
 
 int main() {
     const int n = 25;
-    int i;
+    int i, nameLength;
     /** Declaimer: all matches are random **/
     student a[n] = {
             {1,  "Elon Musk",          true,  true,  true},
@@ -35,36 +36,44 @@ int main() {
             {18, "Johannes Kepler",    true,  false, true},
             {19, "John Kennedy",       false, true,  true},
             {20, "Washington Jorge",   false, true,  true},
-            {21, "Fenry Ford",         false, false, true},
+            {21, "Henry Ford",         false, false, true},
             {22, "Enzo Ferrari",       true,  false, false},
             {23, "Leonardo Da Vinci",  true,  true,  true},
             {24, "Sheldon Cooper",     false, true,  false},
             {25, "Winston Churchill",  true,  true,  true}
     };
-//    cout << "x" << "\tIì'ÿ                         \tÌàò.\tÔiç.\tÀíãë.\n";
+
+    cout << "ID#\t"
+         << setw(22) << std::left << "Students name"
+         << setw(8) << "Math"
+         << setw(6) << "Physic"
+         << setw(6) << "English"
+         << endl;
+
     for (i = 0; i < n; i++) {
-        cout
-                << a[i].number << "\t"
-                << a[i].name << "\t"
-                << a[i].math << "\t"
-                << a[i].physic << "\t"
-                << a[i].english
-                << "\n";
+        cout << a[i].number << "\t"
+             << setw(22) << a[i].name
+             << setw(8) << a[i].math
+             << setw(6) << a[i].physic
+             << setw(6) << a[i].english
+             << endl;
     }
-    cout << "-------------------------------------" << endl;
-//    cout << "Ó÷íi, ÿêi íå çìîãëè âèêîíàòè áiëüø íiæ îäèí ïðåäìåò:\n";
-//    cout << "¹" << "\tIì'ÿ\tÌàò.\tÔiç.\tÀíãë.\n";
+
+    cout << "---------------------------------------------" << endl;
+    cout << "Students that failed more then 1 exam" << endl;
+    cout << "---------------------------------------------" << endl;
+
     for (i = 0; i < n; i++) {
         if ((int) a[i].math + (int) a[i].physic + (int) a[i].english <= 1) {
-            cout
-                    << a[i].number << "\t"
-                    << a[i].name << "\t"
-                    << a[i].math << "\t"
-                    << a[i].physic << "\t"
-                    << a[i].english << "\n";
+            cout << a[i].number << "\t"
+                 << setw(22) << a[i].name
+                 << setw(8) << a[i].math
+                 << setw(6) << a[i].physic
+                 << setw(6) << a[i].english
+                 << endl;
         }
     }
 
-    cout << "-------------------------------------" << endl;
+    cout << "---------------------------------------------" << endl;
     return 0;
 }
