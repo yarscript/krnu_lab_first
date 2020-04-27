@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-    int arrSize = 10;
+    const int arrSize = 10;
     double highest = 0, lowest = 0, arr[arrSize];
 
     for (int i = 0; i < 10; ++i) {

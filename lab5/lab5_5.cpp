@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-    int i, j, arrSize = 7, l = 0, r = 0;
+    const int arrSize = 7;
+    int i, j, l = 0, r = 0;
     int a[arrSize][arrSize];
 
     for (i = 0; i < arrSize; i++) {

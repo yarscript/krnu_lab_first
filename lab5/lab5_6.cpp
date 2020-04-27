@@ -1,7 +1,8 @@
 #include <iostream>
 
 int main() {
-    int i, j, columnLength = 5, rowLength = 6;
+    const int columnLength = 5, rowLength = 6;
+    int i, j;
     int a[columnLength][rowLength], b[columnLength][rowLength], c[columnLength][rowLength];
 
     for (i = 0; i < columnLength; i++) {
